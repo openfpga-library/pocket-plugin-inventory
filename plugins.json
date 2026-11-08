@@ -1,0 +1,68 @@
+{
+  "plugins": [
+    {
+      "id": "playstation-game-files",
+      "repo": "GuardianSoul/openfpga-PlayStation-plugin",
+      "name": "PlayStation game files",
+      "author": "GuardianSoul",
+      "description": "Generates the game files (.json) for the GuardianSoul PlayStation core. One entry per multi-disc game, with every disc in it (switch discs in Core Settings → Swap Discs) and one shared memory card.",
+      "tags": ["playstation"],
+      "requires_input": true,
+      "pupdate": { "phase": "after" },
+      "links": ["https://github.com/GuardianSoul/openfpga-PlayStation"]
+    },
+    {
+      "id": "jotego-analogizer-config",
+      "repo": "mattpannella/pocket-plugin-jotego-analogizer-config",
+      "name": "Jotego Analogizer Config",
+      "author": "mattpannella",
+      "description": "Analogizer settings wizard for Jotego cores. Generates the config file used by all of his cores.",
+      "tags": ["analogizer", "jotego"],
+      "requires_input": true,
+      "links": ["https://github.com/RndMnkIII/Analogizer"]
+    },
+    {
+      "id": "analogizer-config",
+      "repo": "mattpannella/pocket-plugin-analogizer-config",
+      "name": "Analogizer Config",
+      "author": "mattpannella",
+      "description": "Analogizer settings wizard for cores that use the standard Analogizer config (writes Assets/analogizer/common/analogizer.bin).",
+      "tags": ["analogizer"],
+      "requires_input": true,
+      "links": ["https://github.com/RndMnkIII/Analogizer"]
+    },
+    {
+      "id": "jotego-platform-names",
+      "repo": "mattpannella/pocket-plugin-jotego-platform-names",
+      "name": "Rename Jotego Platform Names",
+      "author": "mattpannella",
+      "description": "Gives Jotego cores friendly platform names.",
+      "tags": ["jotego", "platforms"],
+      "requires_input": false,
+      "pupdate": { "phase": "after" },
+      "links": ["https://github.com/dyreschlock/pocket-platform-images"]
+    },
+    {
+      "id": "coinop-license",
+      "repo": "mattpannella/pocket-plugin-coinop-license",
+      "name": "Coin-Op License",
+      "author": "mattpannella",
+      "description": "Downloads your Coin-Op Collection license key (Licenses/coinop.key) using the <serial>.ID file on the SD card root, or asks for the serial the first time. Run it before the cores during Update All so license-gated cores aren't skipped.",
+      "tags": ["coin-op", "license", "keys"],
+      "requires_input": true,
+      "pupdate": { "phase": "before" },
+      "links": ["https://coinopcollection.org"]
+    },
+    {
+      "id": "jotego-beta-key",
+      "repo": "mattpannella/pocket-plugin-jotego-beta-key",
+      "name": "Jotego Beta Key",
+      "author": "mattpannella",
+      "description": "Downloads the latest jtbeta.zip for Jotego beta cores from GitHub (sponsors, needs a token) or Patreon (needs your session cookie) and extracts it into Licenses/. A jtbeta.zip placed on the SD card root will skip the downloads. Asks for the source and credential on the first run, then runs without input. Run it before the cores during Update All, in pupdate.",
+      "tags": ["jotego", "license", "keys"],
+      "requires_input": true,
+      "pupdate": { "phase": "before" },
+      "links": ["https://github.com/jotego/jtbin/wiki/Beta-Files-FAQ", "https://github.com/sponsors/jotego"]
+    }
+  ]
+}
