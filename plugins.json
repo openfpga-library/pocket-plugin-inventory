@@ -63,6 +63,17 @@
       "requires_input": true,
       "pupdate": { "phase": "before" },
       "links": ["https://github.com/jotego/jtbin/wiki/Beta-Files-FAQ", "https://github.com/sponsors/jotego"]
+    },
+    {
+      "id": "system32-roms",
+      "repo": "mmnbass/pocket-plugin-System32",
+      "name": "Sega System 32 ROMs",
+      "author": "mmnbass",
+      "description": "Builds the ROM images for the mmnbass Sega System 32 core (Golden Axe: The Revenge of Death Adder, Spider-Man: The Video Game) from your own MAME sets. Put ga2u.zip and/or spidman.zip in Assets/segas32/common. No ROMs included; no network access.",
+      "tags": ["system32", "arcade", "roms"],
+      "requires_input": false,
+      "pupdate": { "phase": "after" },
+      "links": ["https://github.com/mmnbass/openfpga-System32"]
     }
   ]
 }
